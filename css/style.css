@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap');
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f4f8; /* Light, slightly blueish gray */
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #3A506B; /* Deep teal/blue */
+    color: #fff;
+    padding: 1em 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+}
+
+#header-logo-img {
+    height: 50px; /* Adjust as needed */
+    margin-right: 15px;
+}
+
+.site-title-group h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8em;
+    margin: 0;
+    color: #fff;
+}
+
+.site-title-group .subtitle {
+    font-size: 0.9em;
+    margin: 0;
+    color: #e0e0e0;
+}
+
+.language-selector {
+    display: flex;
+    gap: 8px;
+}
+
+.language-selector button {
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.language-selector button:hover,
+.language-selector button.active {
+    background-color: #FFD700; /* Gold accent */
+    color: #3A506B;
+    border-color: #FFD700;
+}
+
+nav {
+    background-color: #5BC0BE; /* Lighter teal */
+    padding: 0.8em 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+nav a {
+    color: #fff;
+    margin: 0 20px;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+    transition: color 0.3s;
+}
+
+nav a:hover, nav a.active {
+    color: #FFD700; /* Gold accent for hover/active */
+    text-decoration: none;
+}
+
+.container {
+    padding: 30px;
+    max-width: 900px;
+    margin: 30px auto;
+    background-color: #fff;
+    box-shadow: 0 0 15px rgba(0,0,0,0.08);
+    border-radius: 8px;
+    flex-grow: 1;
+}
+
+h1, h2, h3 { /* General h1, h2, h3 styling for content area */
+    font-family: 'Montserrat', sans-serif;
+    color: #2c3e50; /* Darker blue for content headings */
+}
+
+h2 { /* Page specific main heading */
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 2em;
+}
+
+h3 {
+    margin-top: 30px;
+    font-size: 1.5em;
+    border-bottom: 2px solid #5BC0BE;
+    padding-bottom: 5px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+ul {
+    list-style-type: none; /* Remove default bullets */
+    padding-left: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+    padding-left: 25px;
+    position: relative;
+}
+
+ul li::before {
+    content: "✝"; /* Modern biblical icon - cross */
+    position: absolute;
+    left: 0;
+    color: #5BC0BE; /* Teal accent for list items */
+    font-weight: bold;
+}
+
+a {
+    color: #3A506B;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

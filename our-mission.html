@@ -1,44 +1,44 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nossa Missão - Blessed Quiz</title>
-    <style>
-        body { font-family: sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; color: #333; }
-        header { background-color: #333; color: #fff; padding: 1em 0; text-align: center; }
-        nav { background-color: #444; padding: 1em; text-align: center; }
-        nav a { color: #fff; margin: 0 15px; text-decoration: none; font-weight: bold; }
-        nav a:hover { text-decoration: underline; }
-        .container { padding: 20px; max-width: 800px; margin: 20px auto; background-color: #fff; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-        h1 { color: #fff; }
-        h2 { color: #333; text-align: center; }
-        ul { list-style-type: square; padding-left: 20px; }
-        li { margin-bottom: 10px; }
-    </style>
+    <title data-translate="pageTitleOurMission">Our Mission - Blessed Quiz</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/logo_main_small.png" type="image/png">
 </head>
-<body>
+<body data-page-key="pageTitleOurMission">
     <header>
-        <h1>Blessed Quiz</h1>
-        <p>Blessed Quiz is your go-to destination for fun and engaging Bible quizzes!</p>
+        <div class="header-content">
+            <img src="img/logo_main_small.png" alt="Blessed Quiz Logo" id="header-logo-img">
+            <div class="site-title-group">
+                <h1 data-translate="siteTitle">Blessed Quiz</h1>
+                <p data-translate="siteSubtitle" class="subtitle">Your go-to destination for fun and engaging Bible quizzes!</p>
+            </div>
+        </div>
+        <div class="language-selector">
+            <button data-lang="en">EN</button>
+            <button data-lang="pt">PT</button>
+        </div>
     </header>
     <nav>
-        <a href="index.html">Início</a>
-        <a href="our-mission.html">Nossa Missão</a>
-        <a href="terms-of-service.html">Termos de Serviço</a>
-        <a href="privacy-policy.html">Política de Privacidade</a>
+        <a href="index.html" data-translate="navHome">Home</a>
+        <a href="our-mission.html" data-translate="navOurMission" class="active">Our Mission</a>
+        <a href="terms-of-service.html" data-translate="navTerms">Terms of Service</a>
+        <a href="privacy-policy.html" data-translate="navPrivacy">Privacy Policy</a>
     </nav>
     <div class="container">
-        <h2>Nossa Missão</h2>
-        <p>Bem-vindo ao Blessed Quiz!</p>
-        <p>Nossa missão é fornecer uma experiência divertida e enriquecedora para todos que desejam aprofundar seus conhecimentos sobre a Bíblia. Acreditamos que aprender sobre a Palavra de Deus deve ser uma jornada inspiradora e acessível para todos, independentemente de onde estejam em sua caminhada de fé.</p>
-        <p><strong>O que nos move:</strong></p>
+        <h2 data-translate="ourMissionHeader">Our Mission</h2>
+        <p data-translate="missionWelcome">Welcome to Blessed Quiz!</p>
+        <p data-translate="missionP1">Our mission is to provide a fun and enriching experience for everyone who wants to deepen their knowledge of the Bible. We believe that learning about God's Word should be an inspiring and accessible journey for everyone, regardless of where they are in their faith walk.</p>
+        <p data-translate="whatMovesUs"><strong>What moves us:</strong></p>
         <ul>
-            <li><strong>Educação:</strong> Oferecemos quizzes que educam e desafiam, ajudando você a crescer em seu entendimento das Escrituras.</li>
-            <li><strong>Comunidade:</strong> Criamos um espaço onde os crentes podem se conectar, compartilhar e aprender juntos.</li>
-            <li><strong>Inspiração:</strong> Nosso objetivo é inspirá-lo a explorar a Bíblia de maneiras novas e emocionantes, fortalecendo sua fé e conhecimento.</li>
+            <li data-translate="education"><strong>Education:</strong> We offer quizzes that educate and challenge, helping you grow in your understanding of the Scriptures.</li>
+            <li data-translate="community"><strong>Community:</strong> We create a space where believers can connect, share, and learn together.</li>
+            <li data-translate="inspiration"><strong>Inspiration:</strong> Our goal is to inspire you to explore the Bible in new and exciting ways, strengthening your faith and knowledge.</li>
         </ul>
-        <p>Junte-se a nós e faça parte de nossa comunidade de aprendizado e crescimento espiritual!</p>
+        <p data-translate="joinUs">Join us and be part of our community of learning and spiritual growth!</p>
     </div>
+    <script src="js/script.js"></script>
 </body>
 </html>
