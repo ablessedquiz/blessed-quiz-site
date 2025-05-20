@@ -291,7 +291,7 @@ a:hover {
 footer {
     background-color: #2c3e50; /* Cor escura e moderna, ex: azul ardósia escuro */
     color: #ecf0f1; /* Cor de texto clara, ex: cinza claro */
-    padding: 25px 20px 15px; /* Padding superior/inferior reduzido para compactar */
+    padding: 20px 20px 10px; /* Padding superior/inferior reduzido para compactar */
     font-size: 0.9em;
     margin-top: auto; /* Garante que o rodapé fique no final em páginas com pouco conteúdo */
 }
@@ -301,22 +301,22 @@ footer {
     flex-wrap: wrap;
     justify-content: space-between;
     max-width: 1200px;
-    margin: 0 auto 20px; /* Margem inferior reduzida */
-    gap: 15px; /* Espaço entre seções reduzido */
+    margin: 0 auto 15px; /* Margem inferior reduzida */
+    gap: 10px; /* Espaço entre seções reduzido */
 }
 
 .footer-section {
     flex: 1;
     min-width: 250px; /* Para responsividade */
-    margin-bottom: 15px; /* Margem inferior reduzida */
+    margin-bottom: 10px; /* Margem inferior reduzida */
 }
 
 .footer-section h4 {
     color: #ffc107; /* Cor de destaque para títulos, ex: amarelo */
-    font-size: 1.1em; /* Tamanho da fonte ligeiramente reduzido */
-    margin-bottom: 10px; /* Margem inferior reduzida */
+    font-size: 1em; /* Tamanho da fonte ligeiramente reduzido */
+    margin-bottom: 8px; /* Margem inferior reduzida */
     border-bottom: 1px solid #34495e; /* Linha sutil abaixo do título */
-    padding-bottom: 5px; /* Padding inferior reduzido */
+    padding-bottom: 4px; /* Padding inferior reduzido */
 }
 
 .footer-logo {
@@ -326,7 +326,7 @@ footer {
 }
 
 .footer-section.about p {
-    font-size: 0.95em;
+    font-size: 0.9em;
     line-height: 1.6;
     color: #bdc3c7;
 }
@@ -339,7 +339,7 @@ footer {
 .footer-section.links ul li a {
     color: #ecf0f1;
     text-decoration: none;
-    margin-bottom: 8px; /* Margem inferior reduzida */
+    margin-bottom: 6px; /* Margem inferior reduzida */
     display: block;
     transition: color 0.3s ease, padding-left 0.3s ease;
 }
@@ -363,9 +363,9 @@ footer {
 
 .footer-bottom {
     text-align: center;
-    padding-top: 15px; /* Padding superior reduzido */
+    padding-top: 10px; /* Padding superior reduzido */
     border-top: 1px solid #34495e; /* Linha divisória mais escura */
-    font-size: 0.85em;
+    font-size: 0.8em;
     color: #bdc3c7;
 }
 
