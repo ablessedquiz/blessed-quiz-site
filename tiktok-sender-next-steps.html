@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-translate="pageTitleTikTokNextSteps">Next Steps and Future Features - TikTok Sender - Blessed Quiz</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/logBlessedQuiz256x256T.png" type="image/png">
+</head>
+<body data-page-key="pageTitleTikTokNextSteps">
+    <header>
+        <div class="header-content">
+            <img src="img/logBlessedQuiz256x256.png" alt="Blessed Quiz Logo" id="header-logo-img">
+            <div class="site-title-group">
+                <h1 data-translate="siteTitle">Blessed Quiz</h1>
+                <p data-translate="siteSubtitle" class="subtitle">Your go-to destination for fun and engaging Bible quizzes!</p>
+            </div>
+        </div>
+        <div class="language-selector">
+            <button data-lang="en">EN</button>
+            <button data-lang="pt">PT</button>
+        </div>
+    </header>
+    <nav>
+        <a href="index.html" data-translate="navHome">Home</a>
+        <a href="our-mission.html" data-translate="navOurMission">Our Mission</a>
+        <a href="terms-of-service.html" data-translate="navTerms">Terms of Service</a>
+        <a href="privacy-policy.html" data-translate="navPrivacy">Privacy Policy</a>
+        <a href="tiktok-sender-overview.html" data-translate="navTikTokOverview">TikTok Sender Overview</a>
+        <a href="tiktok-sender-how-it-works.html" data-translate="navTikTokHowItWorks">How it Works</a>
+        <a href="tiktok-sender-tech-config.html" data-translate="navTikTokTechConfig">Tech & Config</a>
+        <a href="tiktok-sender-improvements.html" data-translate="navTikTokImprovements">Improvements</a>
+        <a href="tiktok-sender-next-steps.html" data-translate="navTikTokNextSteps" class="active">Next Steps</a>
+    </nav>
+    <div class="container">
+        <h2 data-translate="tiktokNextStepsHeader">Next Steps and Future Features</h2>
+        <p data-translate="tiktokNextStepsIntro">Com base nos pontos de melhoria, as seguintes funcionalidades e aprimoramentos de interface são sugeridos:</p>
+
+        <h3 data-translate="tiktokNextStepsUIHeader">Melhorias na Interface do Usuário (UI)</h3>
+        <ul>
+            <li data-translate="tiktokNextStepsUIHome"><strong>Página Inicial (/):</strong> Boas-vindas e botão 'Login com TikTok'.</li>
+            <li data-translate="tiktokNextStepsUIUploadForm"><strong>Formulário de Upload:</strong> Campo para selecionar arquivo, campos para título, descrição, hashtags e outras configurações.</li>
+            <li data-translate="tiktokNextStepsUIStatus"><strong>Página de Feedback/Status:</strong> Mostrar sucesso/erro do upload e status da publicação (se aplicável).</li>
+            <li data-translate="tiktokNextStepsUILayout"><strong>Layout Consistente:</strong> Usar templates Flask (Jinja2) para um visual coeso.</li>
+        </ul>
+
+        <h3 data-translate="tiktokNextStepsFeaturesHeader">Novas Funcionalidades</h3>
+        <ul>
+            <li data-translate="tiktokNextStepsFeaturesDynamicFile"><strong>Seleção Dinâmica de Vídeo:</strong> Permitir que o usuário escolha o arquivo.</li>
+            <li data-translate="tiktokNextStepsFeaturesMetadataInput"><strong>Entrada de Metadados pelo Usuário:</strong> Capturar título, descrição, etc., via formulário.</li>
+            <li data-translate="tiktokNextStepsFeaturesRefreshToken"><strong>Implementação do refresh_token:</strong> Renovar o <code>access_token</code> automaticamente quando expirar.</li>
+            <li data-translate="tiktokNextStepsFeaturesDirectPublish"><strong>Opção de Publicação Direta:</strong> Permitir escolher entre rascunhos (<code>video.upload</code>) e publicação direta (<code>video.publish</code>), incluindo verificação de status.</li>
+            <li data-translate="tiktokNextStepsFeaturesConfig"><strong>Gerenciamento de Configurações Melhorado:</strong> Ler configurações de variáveis de ambiente ou arquivo <code>.env</code>.</li>
+            <li data-translate="tiktokNextStepsFeaturesHistory"><strong>Histórico de Uploads (Avançado):</strong> Armazenar e exibir histórico em um banco de dados.</li>
+            <li data-translate="tiktokNextStepsFeaturesScheduling"><strong>Agendamento de Posts (Muito Avançado):</strong> Permitir agendar a publicação para data/hora futura.</li>
+            <li data-translate="tiktokNextStepsFeaturesMultiAccount"><strong>Suporte a Múltiplas Contas (Avançado):</strong> Gerenciar várias contas TikTok.</li>
+        </ul>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-translate="pageTitleTikTokHowItWorks">How it Works - TikTok Sender - Blessed Quiz</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/logBlessedQuiz256x256T.png" type="image/png">
+</head>
+<body data-page-key="pageTitleTikTokHowItWorks">
+    <header>
+        <div class="header-content">
+            <img src="img/logBlessedQuiz256x256.png" alt="Blessed Quiz Logo" id="header-logo-img">
+            <div class="site-title-group">
+                <h1 data-translate="siteTitle">Blessed Quiz</h1>
+                <p data-translate="siteSubtitle" class="subtitle">Your go-to destination for fun and engaging Bible quizzes!</p>
+            </div>
+        </div>
+        <div class="language-selector">
+            <button data-lang="en">EN</button>
+            <button data-lang="pt">PT</button>
+        </div>
+    </header>
+    <nav>
+        <a href="index.html" data-translate="navHome">Home</a>
+        <a href="our-mission.html" data-translate="navOurMission">Our Mission</a>
+        <a href="terms-of-service.html" data-translate="navTerms">Terms of Service</a>
+        <a href="privacy-policy.html" data-translate="navPrivacy">Privacy Policy</a>
+        <a href="tiktok-sender-overview.html" data-translate="navTikTokOverview">TikTok Sender Overview</a>
+        <a href="tiktok-sender-how-it-works.html" data-translate="navTikTokHowItWorks" class="active">How it Works</a>
+        <a href="tiktok-sender-tech-config.html" data-translate="navTikTokTechConfig">Tech & Config</a>
+        <a href="tiktok-sender-improvements.html" data-translate="navTikTokImprovements">Improvements</a>
+        <a href="tiktok-sender-next-steps.html" data-translate="navTikTokNextSteps">Next Steps</a>
+    </nav>
+    <div class="container">
+        <h2 data-translate="tiktokHowItWorksHeader">How it Works</h2>
+
+        <h3 data-translate="tiktokHowItWorksAuthHeader">Autenticação OAuth 2.0 com PKCE</h3>
+        <p data-translate="tiktokHowItWorksAuthIntro">O processo de autenticação segue o fluxo OAuth 2.0 com Proof Key for Code Exchange (PKCE) para segurança:</p>
+        <ul>
+            <li data-translate="tiktokHowItWorksAuthStep1"><strong>Início do Fluxo (/):</strong> Gera um <code>code_verifier</code> e <code>code_challenge</code>, redireciona o usuário para a página de autorização do TikTok com os parâmetros necessários (CLIENT_KEY, SCOPES, REDIRECT_URI, code_challenge).</li>
+            <li data-translate="tiktokHowItWorksAuthStep2"><strong>Callback (/callback):</strong> Recebe o <code>code</code> do TikTok, recupera o <code>code_verifier</code> da sessão. Faz uma requisição POST para o endpoint de token do TikTok para trocar o <code>code</code> pelo <code>access_token</code> e <code>refresh_token</code>, usando o <code>code_verifier</code> para validação (PKCE). Armazena os tokens e <code>open_id</code> na sessão.</li>
+        </ul>
+
+        <h3 data-translate="tiktokHowItWorksUploadHeader">Upload de Vídeo (/upload)</h3>
+        <p data-translate="tiktokHowItWorksUploadIntro">Após a autenticação, o upload do vídeo ocorre da seguinte forma:</p>
+        <ul>
+            <li data-translate="tiktokHowItWorksUploadStep1"><strong>Pré-requisitos:</strong> Requer <code>access_token</code> e <code>open_id</code> na sessão. O caminho do arquivo de vídeo (<code>VIDEO_FILE_PATH</code>) é fixo no código.</li>
+            <li data-translate="tiktokHowItWorksUploadStep2"><strong>Inicialização do Upload:</strong> Faz uma requisição POST para <code>/v2/post/publish/inbox/video/init/</code> com o <code>access_token</code> e <code>open_id</code>, fornecendo informações sobre o vídeo (tamanho, etc.). Recebe uma <code>upload_url</code> e <code>publish_id</code>.</li>
+            <li data-translate="tiktokHowItWorksUploadStep3"><strong>Envio do Arquivo:</strong> Faz uma requisição PUT para a <code>upload_url</code> com os dados binários do arquivo de vídeo. O vídeo é enviado para a caixa de entrada/rascunhos do usuário no TikTok.</li>
+            <li data-translate="tiktokHowItWorksUploadStep4"><strong>Resultado:</strong> O usuário precisa acessar o aplicativo TikTok para publicar o vídeo manualmente a partir dos rascunhos.</li>
+        </ul>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
