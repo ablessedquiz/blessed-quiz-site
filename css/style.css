@@ -150,3 +150,256 @@ a {
 a:hover {
     text-decoration: underline;
 }
+
+/* Hero Section Styles */
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/bible-background.jpg'); /* Considere adicionar uma imagem de fundo temática em img/bible-background.jpg */
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 70vh; /* Ajuste conforme necessário */
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero-logo {
+    width: 150px; /* Ajuste o tamanho conforme necessário */
+    margin-bottom: 20px;
+}
+
+.hero-section h2 {
+    font-size: 3em; /* Aumentado para destaque */
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+.hero-section p {
+    font-size: 1.4em; /* Aumentado para destaque */
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.cta-button {
+    background-color: #ffc107; /* Cor de destaque, ex: amarelo */
+    color: #333;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius: 50px; /* Bordas arredondadas para um look moderno */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.cta-button:hover {
+    background-color: #e0a800; /* Cor mais escura no hover */
+    transform: translateY(-3px);
+}
+
+/* General Page Section Styles */
+.page-section {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.page-section h3 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 40px;
+    position: relative;
+    display: inline-block;
+}
+
+.page-section h3::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #ffc107; /* Cor de destaque */
+    margin: 10px auto 0;
+}
+
+
+/* Features Grid Styles */
+.features-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.feature-item {
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 10px;
+    width: calc(33.333% - 40px); /* Ajuste para 3 colunas com gap */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.feature-item i {
+    color: #007bff; /* Cor primária para ícones */
+    margin-bottom: 15px;
+}
+
+.feature-item h4 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.feature-item p {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Featured Quizzes Section */
+.featured-quizzes-section {
+    background-color: #eef4f7; /* Um fundo levemente diferente */
+}
+
+.quiz-placeholder {
+    background-color: #fff;
+    border: 1px dashed #ccc;
+    padding: 20px;
+    margin: 15px auto;
+    border-radius: 8px;
+    max-width: 400px;
+    color: #777;
+    font-style: italic;
+}
+
+
+/* Footer Styles */
+footer {
+    background-color: #2c3e50; /* Cor escura e moderna, ex: azul ardósia escuro */
+    color: #ecf0f1; /* Cor de texto clara, ex: cinza claro */
+    padding: 40px 20px 20px; /* Aumentar padding superior */
+    font-size: 0.9em;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto 30px; /* Adicionar margem inferior */
+    gap: 20px; /* Espaço entre seções */
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px; /* Para responsividade */
+    margin-bottom: 20px; /* Espaço para telas menores */
+}
+
+.footer-section h4 {
+    color: #ffc107; /* Cor de destaque para títulos, ex: amarelo */
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #34495e; /* Linha sutil abaixo do título */
+    padding-bottom: 8px;
+}
+
+.footer-logo {
+    width: 60px; /* Tamanho menor para o logo no rodapé */
+    margin-bottom: 10px;
+    opacity: 0.8;
+}
+
+.footer-section.about p {
+    font-size: 0.95em;
+    line-height: 1.6;
+    color: #bdc3c7; /* Cinza um pouco mais escuro para o texto */
+}
+
+.footer-section.links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section.links ul li a {
+    color: #ecf0f1;
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: block;
+    transition: color 0.3s ease, padding-left 0.3s ease;
+}
+
+.footer-section.links ul li a:hover {
+    color: #ffc107; /* Destaque no hover */
+    padding-left: 5px; /* Pequeno efeito de indentação */
+}
+
+.footer-section.social a {
+    color: #ecf0f1;
+    margin-right: 15px;
+    font-size: 1.5em; /* Ícones maiores */
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-section.social a:hover {
+    color: #ffc107; /* Destaque no hover */
+    transform: scale(1.1); /* Efeito de zoom sutil */
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #34495e; /* Linha divisória mais escura */
+    font-size: 0.85em;
+    color: #bdc3c7;
+}
+
+/* Responsive adjustments for features and footer */
+@media (max-width: 992px) {
+    .feature-item {
+        width: calc(50% - 30px); /* 2 colunas em tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section h2 {
+        font-size: 2.5em;
+    }
+    .hero-section p {
+        font-size: 1.2em;
+    }
+    .cta-button {
+        padding: 12px 25px;
+        font-size: 1.1em;
+    }
+    .feature-item {
+        width: calc(100% - 20px); /* 1 coluna em mobile */
+        margin-bottom: 20px;
+    }
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .footer-section {
+        min-width: 100%;
+    }
+    .footer-section.social a {
+        margin: 0 10px; /* Ajustar margem para ícones sociais centralizados */
+    }
+}
+

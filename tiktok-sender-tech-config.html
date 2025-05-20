@@ -57,5 +57,36 @@
         </ul>
     </div>
     <script src="js/script.js"></script>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section about">
+                <img src="img/logBlessedQuiz256x256T.png" alt="Blessed Quiz Mini Logo" class="footer-logo">
+                <p data-translate="footerTagline">Blessed Quiz - Desafie seu conhecimento, fortaleça sua fé.</p>
+            </div>
+            <div class="footer-section links">
+                <h4 data-translate="footerQuickLinks">Links Rápidos</h4>
+                <ul>
+                    <li><a href="index.html" data-translate="navHome">Home</a></li>
+                    <li><a href="our-mission.html" data-translate="navOurMission">Nossa Missão</a></li>
+                    <li><a href="terms-of-service.html" data-translate="navTerms">Termos de Serviço</a></li>
+                    <li><a href="privacy-policy.html" data-translate="navPrivacy">Política de Privacidade</a></li>
+                </ul>
+            </div>
+            <div class="footer-section social">
+                <h4 data-translate="footerFollowUs">Siga-nos</h4>
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="Tiktok"><i class="fab fa-tiktok"></i></a>
+                <!-- Adicione mais redes sociais conforme necessário -->
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; <span id="currentYear"></span> Blessed Quiz. <span data-translate="footerAllRightsReserved">Todos os direitos reservados.</span>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>

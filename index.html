@@ -34,10 +34,83 @@
         <a href="tiktok-sender-improvements.html"><i class="fas fa-arrow-alt-circle-up"></i> <span data-translate="navTikTokImprovements">Improvements</span></a>
         <a href="tiktok-sender-next-steps.html"><i class="fas fa-arrow-right"></i> <span data-translate="navTikTokNextSteps">Next Steps</span></a>
     </nav>
-    <div class="container">
-        <h2 data-translate="indexHeader">Welcome to Blessed Quiz!</h2>
-        <p data-translate="indexIntro">Explore your knowledge of the Bible with our engaging quizzes. Select a page from the menu to learn more about us or start your journey!</p>
+
+    <div class="hero-section">
+        <div class="hero-content">
+            <img src="img/logBlessedQuiz256x256.png" alt="Blessed Quiz Logo Grande" class="hero-logo">
+            <h2 data-translate="indexHeroTitle">Bem-vindo ao Blessed Quiz!</h2>
+            <p data-translate="indexHeroSubtitle">Sua jornada de descoberta e aprendizado bíblico começa aqui. Mergulhe em quizzes interativos e fortaleça sua fé de maneira divertida e envolvente.</p>
+            <a href="#features" class="cta-button" data-translate="indexHeroCTA">Descubra Mais</a>
+        </div>
     </div>
+
+    <div class="container page-section" id="features">
+        <h3 data-translate="indexWhyBlessedQuizTitle">Por que o Blessed Quiz?</h3>
+        <div class="features-grid">
+            <div class="feature-item">
+                <i class="fas fa-graduation-cap fa-2x"></i>
+                <h4 data-translate="indexFeatureLearnTitle">Aprenda e Cresça</h4>
+                <p data-translate="indexFeatureLearnText">Nossos quizzes são cuidadosamente elaborados para educar e inspirar, ajudando você a aprofundar seu conhecimento das Escrituras Sagradas.</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-users fa-2x"></i>
+                <h4 data-translate="indexFeatureCommunityTitle">Comunidade Vibrante</h4>
+                <p data-translate="indexFeatureCommunityText">Junte-se a uma comunidade de entusiastas da Bíblia, compartilhe aprendizados e cresça na fé junto com outros usuários.</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-lightbulb fa-2x"></i>
+                <h4 data-translate="indexFeatureEngageTitle">Engajamento Divertido</h4>
+                <p data-translate="indexFeatureEngageText">Acreditamos que o aprendizado pode ser divertido! Desafie-se com nossos quizzes e veja o conhecimento bíblico ganhar vida.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container page-section featured-quizzes-section">
+        <h3 data-translate="indexFeaturedQuizzesTitle">Quizzes em Destaque</h3>
+        <p data-translate="indexFeaturedQuizzesText">Em breve, você encontrará aqui uma seleção dos nossos quizzes mais populares e desafiadores. Prepare-se para testar seus conhecimentos!</p>
+        <!-- Placeholder para futuros cards de quizzes -->
+        <div class="quiz-placeholder">
+            <span data-translate="indexQuizPlaceholder1">Quiz: Livros do Antigo Testamento</span>
+        </div>
+        <div class="quiz-placeholder">
+            <span data-translate="indexQuizPlaceholder2">Quiz: Personagens Bíblicos</span>
+        </div>
+    </div>
+
     <script src="js/script.js"></script>
+    <!-- Footer será adicionado abaixo pelo script -->
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section about">
+                <img src="img/logBlessedQuiz256x256T.png" alt="Blessed Quiz Mini Logo" class="footer-logo">
+                <p data-translate="footerTagline">Blessed Quiz - Desafie seu conhecimento, fortaleça sua fé.</p>
+            </div>
+            <div class="footer-section links">
+                <h4 data-translate="footerQuickLinks">Links Rápidos</h4>
+                <ul>
+                    <li><a href="index.html" data-translate="navHome">Home</a></li>
+                    <li><a href="our-mission.html" data-translate="navOurMission">Nossa Missão</a></li>
+                    <li><a href="terms-of-service.html" data-translate="navTerms">Termos de Serviço</a></li>
+                    <li><a href="privacy-policy.html" data-translate="navPrivacy">Política de Privacidade</a></li>
+                </ul>
+            </div>
+            <div class="footer-section social">
+                <h4 data-translate="footerFollowUs">Siga-nos</h4>
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="Tiktok"><i class="fab fa-tiktok"></i></a>
+                <!-- Adicione mais redes sociais conforme necessário -->
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; <span id="currentYear"></span> Blessed Quiz. <span data-translate="footerAllRightsReserved">Todos os direitos reservados.</span>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+    
+
 </body>
 </html>
