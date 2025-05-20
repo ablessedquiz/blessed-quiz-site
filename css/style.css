@@ -297,9 +297,10 @@ a:hover {
 footer {
     background-color: #2c3e50; /* Cor escura e moderna, ex: azul ardósia escuro */
     color: #ecf0f1; /* Cor de texto clara, ex: cinza claro */
-    padding: 20px 20px 10px; /* Padding superior/inferior reduzido para compactar */
+    padding: 20px 20px 5px; /* Padding superior/inferior reduzido para compactar */
     font-size: 0.9em;
     margin-top: auto; /* Garante que o rodapé fique no final em páginas com pouco conteúdo */
+    text-align: left;
 }
 
 .footer-content {
@@ -307,22 +308,24 @@ footer {
     flex-wrap: wrap;
     justify-content: space-between;
     max-width: 1200px;
-    margin: 0 auto 15px; /* Margem inferior reduzida */
-    gap: 10px; /* Espaço entre seções reduzido */
+    margin: 0 auto; /* Margem inferior controlada por .footer-section ou .footer-bottom */
+    gap: 15px; /* Espaço entre seções */
 }
 
 .footer-section {
     flex: 1;
     min-width: 250px; /* Para responsividade */
-    margin-bottom: 10px; /* Margem inferior reduzida */
+    margin-bottom: 15px; /* Margem inferior */
+    padding: 0 10px; /* Padding interno da seção */
 }
 
 .footer-section h4 {
-    color: #ffc107; /* Cor de destaque para títulos, ex: amarelo */
-    font-size: 1em; /* Tamanho da fonte ligeiramente reduzido */
-    margin-bottom: 8px; /* Margem inferior reduzida */
-    border-bottom: 1px solid #34495e; /* Linha sutil abaixo do título */
-    padding-bottom: 4px; /* Padding inferior reduzido */
+    color: #ffffff; /* Cor de destaque para títulos, ex: branco */
+    font-size: 1.1em; /* Tamanho da fonte */
+    margin-bottom: 10px; /* Margem inferior */
+    border-bottom: 1px solid #3498db; /* Linha sutil abaixo do título */
+    padding-bottom: 5px; /* Padding inferior */
+    font-weight: 600;
 }
 
 .footer-logo {
@@ -332,9 +335,10 @@ footer {
 }
 
 .footer-section.about p {
-    font-size: 0.9em;
-    line-height: 1.6;
+    font-size: 0.85em; /* Tamanho da fonte reduzido */
+    line-height: 1.5;  /* Altura da linha reduzida */
     color: #bdc3c7;
+    margin-bottom: 8px; /* Margem inferior reduzida */
 }
 
 .footer-section.links ul {
@@ -345,16 +349,17 @@ footer {
 }
 
 .footer-section.links ul li a {
-    color: #ecf0f1;
+    color: #bdc3c7; /* Cor dos links */
+    font-size: 0.85em; /* Tamanho da fonte dos links */
     text-decoration: none;
-    margin-bottom: 6px; /* Margem inferior reduzida */
+    margin-bottom: 4px; /* Margem inferior reduzida */
     display: block;
     width: 50%; /* Make each list item take 50% width for two columns */
     box-sizing: border-box; /* Include padding/border in width */
-    padding-right: 10px; /* Add some space between columns */
+    padding-right: 5px; /* Espaço entre colunas */
     padding-left: 0; /* Reset padding-left from general ul li rule */
     position: static; /* Reset position from general ul li rule */
-    transition: color 0.3s ease, padding-left 0.3s ease;
+    transition: color 0.2s ease, padding-left 0.2s ease;
 }
 
 .footer-section.links ul li a:hover {
@@ -368,8 +373,8 @@ footer {
 
 .footer-section.social a {
     color: #ecf0f1;
-    margin-right: 15px;
-    font-size: 1.5em; /* Ícones maiores */
+    margin-right: 10px; /* Espaço entre ícones sociais */
+    font-size: 1.4em; /* Tamanho dos ícones sociais */
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
@@ -380,11 +385,18 @@ footer {
 
 .footer-bottom {
     text-align: center;
-    padding-top: 10px; /* Padding superior reduzido */
+    padding-top: 10px; /* Padding superior */
+    margin-top: 10px;  /* Margem superior para separar do conteúdo acima */
     border-top: 1px solid #34495e; /* Linha divisória mais escura */
     font-size: 0.8em;
     color: #bdc3c7;
+    width: 100%; /* Garante que ocupe toda a largura */
 }
+
+.footer-bottom p { /* Adicionado para garantir que a margem do p seja 0 */
+    margin: 0;
+}
+
 
 /* Responsive adjustments for features and footer */
 @media (max-width: 992px) {
@@ -412,6 +424,7 @@ footer {
         flex-direction: column;
         align-items: center;
         text-align: center;
+        gap: 10px; /* Ajustar gap para mobile */
     }
     .footer-section.links ul li {
         width: 100%; /* Stack links back to one column on smaller screens */
@@ -419,8 +432,19 @@ footer {
     }
     .footer-section {
         min-width: 100%;
+        margin-bottom: 10px; /* Reduzir margem para mobile */
+        padding: 0 5px; /* Reduzir padding para mobile */
+    }
+    .footer-section h4 {
+        font-size: 1.05em; /* Reduzir fonte para mobile */
+    }
+     .footer-section.about p, .footer-section.links ul li a {
+        font-size: 0.8em; /* Reduzir fonte para mobile */
     }
     .footer-section.social a {
         margin: 0 10px; /* Ajustar margem para ícones sociais centralizados */
+    }
+    .footer-bottom {
+        margin-top: 15px; /* Ajustar margem para mobile */
     }
 }
