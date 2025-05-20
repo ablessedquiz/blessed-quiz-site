@@ -291,8 +291,9 @@ a:hover {
 footer {
     background-color: #2c3e50; /* Cor escura e moderna, ex: azul ardósia escuro */
     color: #ecf0f1; /* Cor de texto clara, ex: cinza claro */
-    padding: 40px 20px 20px; /* Aumentar padding superior */
+    padding: 25px 20px 15px; /* Padding superior/inferior reduzido para compactar */
     font-size: 0.9em;
+    margin-top: auto; /* Garante que o rodapé fique no final em páginas com pouco conteúdo */
 }
 
 .footer-content {
@@ -300,34 +301,34 @@ footer {
     flex-wrap: wrap;
     justify-content: space-between;
     max-width: 1200px;
-    margin: 0 auto 30px; /* Adicionar margem inferior */
-    gap: 20px; /* Espaço entre seções */
+    margin: 0 auto 20px; /* Margem inferior reduzida */
+    gap: 15px; /* Espaço entre seções reduzido */
 }
 
 .footer-section {
     flex: 1;
     min-width: 250px; /* Para responsividade */
-    margin-bottom: 20px; /* Espaço para telas menores */
+    margin-bottom: 15px; /* Margem inferior reduzida */
 }
 
 .footer-section h4 {
     color: #ffc107; /* Cor de destaque para títulos, ex: amarelo */
-    font-size: 1.2em;
-    margin-bottom: 15px;
+    font-size: 1.1em; /* Tamanho da fonte ligeiramente reduzido */
+    margin-bottom: 10px; /* Margem inferior reduzida */
     border-bottom: 1px solid #34495e; /* Linha sutil abaixo do título */
-    padding-bottom: 8px;
+    padding-bottom: 5px; /* Padding inferior reduzido */
 }
 
 .footer-logo {
     width: 60px; /* Tamanho menor para o logo no rodapé */
-    margin-bottom: 10px;
+    margin-bottom: 8px; /* Margem inferior ligeiramente reduzida */
     opacity: 0.8;
 }
 
 .footer-section.about p {
     font-size: 0.95em;
     line-height: 1.6;
-    color: #bdc3c7; /* Cinza um pouco mais escuro para o texto */
+    color: #bdc3c7;
 }
 
 .footer-section.links ul {
@@ -338,7 +339,7 @@ footer {
 .footer-section.links ul li a {
     color: #ecf0f1;
     text-decoration: none;
-    margin-bottom: 10px;
+    margin-bottom: 8px; /* Margem inferior reduzida */
     display: block;
     transition: color 0.3s ease, padding-left 0.3s ease;
 }
@@ -362,7 +363,7 @@ footer {
 
 .footer-bottom {
     text-align: center;
-    padding-top: 20px;
+    padding-top: 15px; /* Padding superior reduzido */
     border-top: 1px solid #34495e; /* Linha divisória mais escura */
     font-size: 0.85em;
     color: #bdc3c7;
@@ -402,4 +403,3 @@ footer {
         margin: 0 10px; /* Ajustar margem para ícones sociais centralizados */
     }
 }
-
