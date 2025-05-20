@@ -149,7 +149,8 @@ document.addEventListener('DOMContentLoaded', () => {
             tiktokNextStepsFeaturesConfig: "<strong>Improved Configuration Management:</strong> Read settings from environment variables or <code>.env</code> file.",
             tiktokNextStepsFeaturesHistory: "<strong>Upload History (Advanced):</strong> Store and display history in a database.",
             tiktokNextStepsFeaturesScheduling: "<strong>Post Scheduling (Very Advanced):</strong> Allow scheduling publication for a future date/time.",
-            tiktokNextStepsFeaturesMultiAccount: "<strong>Multi-Account Support (Advanced):</strong> Manage multiple TikTok accounts."
+            tiktokNextStepsFeaturesMultiAccount: "<strong>Multi-Account Support (Advanced):</strong> Manage multiple TikTok accounts.",
+            footerSlogan: "Blessed Quiz - Challenge your knowledge, strengthen your faith."
         },
         pt: {
             // Site-wide
@@ -299,7 +300,8 @@ document.addEventListener('DOMContentLoaded', () => {
             tiktokNextStepsFeaturesConfig: "<strong>Gerenciamento de Configurações Melhorado:</strong> Ler configurações de variáveis de ambiente ou arquivo <code>.env</code>.",
             tiktokNextStepsFeaturesHistory: "<strong>Histórico de Uploads (Avançado):</strong> Armazenar e exibir histórico em um banco de dados.",
             tiktokNextStepsFeaturesScheduling: "<strong>Post Agendado (Muito Avançado):</strong> Permitir agendar a publicação para data/hora futura.", // Corrected translation
-            tiktokNextStepsFeaturesMultiAccount: "<strong>Suporte a Múltiplas Contas (Avançado):</strong> Gerenciar várias contas TikTok."
+            tiktokNextStepsFeaturesMultiAccount: "<strong>Suporte a Múltiplas Contas (Avançado):</strong> Gerenciar várias contas TikTok.",
+            footerSlogan: "Blessed Quiz - Desafie seu conhecimento, fortaleça sua fé."
         }
     };
 
