@@ -9,6 +9,12 @@ document.addEventListener('DOMContentLoaded', () => {
             navTerms: "Terms of Service",
             navPrivacy: "Privacy Policy",
             contactEmailLink: "<a href=\"mailto:ablessedquiz@gmail.com\">ablessedquiz@gmail.com</a>",
+            navTikTokOverview: "TikTok Sender Overview",
+            navTikTokHowItWorks: "How it Works",
+            navTikTokTechConfig: "Tech & Config",
+            navTikTokImprovements: "Improvements",
+            navTikTokNextSteps: "Next Steps",
+
 
             // index.html
             pageTitleIndex: "Blessed Quiz - Home",
@@ -20,10 +26,13 @@ document.addEventListener('DOMContentLoaded', () => {
             ourMissionHeader: "Our Mission",
             missionWelcome: "Welcome to Blessed Quiz!",
             missionP1: "Our mission is to provide a fun and enriching experience for everyone who wants to deepen their knowledge of the Bible. We believe that learning about God's Word should be an inspiring and accessible journey for everyone, regardless of where they are in their faith walk.",
-            whatMovesUs: "<strong>What moves us:</strong>",
-            education: "<strong>Education:</strong> We offer quizzes that educate and challenge, helping you grow in your understanding of the Scriptures.",
-            community: "<strong>Community:</strong> We create a space where believers can connect, share, and learn together.",
-            inspiration: "<strong>Inspiration:</strong> Our goal is to inspire you to explore the Bible in new and exciting ways, strengthening your faith and knowledge.",
+            whatMovesUsHeading: "What moves us:", // Corrected key
+            educationHeading: "Education:", // Corrected key
+            educationText: "We offer quizzes that educate and challenge, helping you grow in your understanding of the Scriptures.", // Corrected key
+            communityHeading: "Community:", // Corrected key
+            communityText: "We create a space where believers can connect, share, and learn together.", // Corrected key
+            inspirationHeading: "Inspiration:", // Corrected key
+            inspirationText: "Our goal is to inspire you to explore the Bible in new and exciting ways, strengthening your faith and knowledge.", // Corrected key
             joinUs: "Join us and be part of our community of learning and spiritual growth!",
 
             // terms-of-service.html
@@ -67,6 +76,80 @@ document.addEventListener('DOMContentLoaded', () => {
             privacyPolicyChangesP: "We may update this Privacy Policy from time to time. Any changes will be posted on this page, and your continued use of the site constitutes acceptance of the updated policy.",
             privacyContactTitle: "8. Contact Information",
             privacyContactP: "If you have any questions or concerns about this Privacy Policy, please contact us at ", // Email will be appended
+
+            // TikTok Sender Pages Translations
+            pageTitleTikTokOverview: "TikTok Sender Project Overview - Blessed Quiz",
+            tiktokOverviewHeader: "Project Overview: BlessedQuizz_TIKTOK_sender_V6.py",
+            tiktokOverviewP1: "This project is a web application built with Flask (a Python microframework) whose main objective is to allow video uploads to TikTok. It automates the authentication and video file sending process to the platform.",
+            tiktokOverviewFeaturesHeader: "Main Features",
+            tiktokOverviewFeaturesIntro: "The project implements the following main features:",
+            tiktokOverviewFeatureAuth: "OAuth 2.0 authentication with PKCE to connect with the user's TikTok account.",
+            tiktokOverviewFeatureUpload: "Upload of video files to the TikTok inbox (drafts).",
+            tiktokOverviewFeatureConfig: "Configuration via variables in the code.",
+
+            pageTitleTikTokHowItWorks: "How it Works - TikTok Sender - Blessed Quiz",
+            tiktokHowItWorksHeader: "How it Works",
+            tiktokHowItWorksAuthHeader: "OAuth 2.0 Authentication with PKCE",
+            tiktokHowItWorksAuthIntro: "The authentication process follows the OAuth 2.0 flow with Proof Key for Code Exchange (PKCE) for security:",
+            tiktokHowItWorksAuthStep1: "<strong>Flow Start (/):</strong> Generates a <code>code_verifier</code> and <code>code_challenge</code>, redirects the user to TikTok's authorization page with necessary parameters (CLIENT_KEY, SCOPES, REDIRECT_URI, code_challenge).",
+            tiktokHowItWorksAuthStep2: "<strong>Callback (/callback):</strong> Receives the <code>code</code> from TikTok, retrieves the <code>code_verifier</code> from the session. Makes a POST request to TikTok's token endpoint to exchange the <code>code</code> for an <code>access_token</code> and <code>refresh_token</code>, using the <code>code_verifier</code> for validation (PKCE). Stores tokens and <code>open_id</code> in the session.",
+            tiktokHowItWorksUploadHeader: "Video Upload (/upload)",
+            tiktokHowItWorksUploadIntro: "After authentication, video upload occurs as follows:",
+            tiktokHowItWorksUploadStep1: "<strong>Prerequisites:</strong> Requires <code>access_token</code> and <code>open_id</code> in the session. The video file path (<code>VIDEO_FILE_PATH</code>) is hardcoded.",
+            tiktokHowItWorksUploadStep2: "<strong>Upload Initialization:</strong> Makes a POST request to <code>/v2/post/publish/inbox/video/init/</code> with the <code>access_token</code> and <code>open_id</code>, providing video information (size, etc.). Receives an <code>upload_url</code> and <code>publish_id</code>.",
+            tiktokHowItWorksUploadStep3: "<strong>File Sending:</strong> Makes a PUT request to the <code>upload_url</code> with the binary data of the video file. The video is sent to the user's TikTok inbox/drafts.",
+            tiktokHowItWorksUploadStep4: "<strong>Result:</strong> The user needs to access the TikTok app to manually publish the video from drafts.",
+
+            pageTitleTikTokTechConfig: "Technology and Configuration - TikTok Sender - Blessed Quiz",
+            tiktokTechConfigHeader: "Technology and Configuration",
+            tiktokTechConfigConfigHeader: "Configuration",
+            tiktokTechConfigConfigIntro: "Main settings are defined as global variables at the beginning of the script:",
+            tiktokTechConfigConfigKey: "<code>CLIENT_KEY</code>, <code>CLIENT_SECRET</code>: TikTok API credentials.",
+            tiktokTechConfigConfigUrls: "<code>NGROK_OR_HOST_URL</code>, <code>REDIRECT_URI</code>: URLs for OAuth redirection.",
+            tiktokTechConfigConfigScopes: "<code>SCOPES</code>: Requested permissions (e.g., <code>user.info.basic</code>, <code>video.upload</code>).",
+            tiktokTechConfigConfigFile: "<code>VIDEO_FILE_PATH</code>: Fixed path to the video file to be uploaded.",
+            tiktokTechConfigConfigSession: "Flask session is configured to use the filesystem (<code>flask_session</code>).",
+            tiktokTechConfigTechHeader: "Technologies Used",
+            tiktokTechConfigTechIntro: "The project uses the following Python technologies and libraries:",
+            tiktokTechConfigTechFlask: "<strong>Flask:</strong> Web microframework for the application structure.",
+            tiktokTechConfigTechFlaskSession: "<strong>Flask-Session:</strong> Extension for session management.",
+            tiktokTechConfigTechRequests: "<strong>Requests:</strong> For making HTTP requests to the TikTok API.",
+            tiktokTechConfigTechCrypto: "<strong>hashlib, base64, secrets:</strong> Standard modules for cryptographic operations (PKCE).",
+            tiktokTechConfigTechStdlib: "<strong>os, json:</strong> Standard modules for file and JSON manipulation.",
+
+            pageTitleTikTokImprovements: "Points for Improvement - TikTok Sender - Blessed Quiz",
+            tiktokImprovementsHeader: "Points for Improvement",
+            tiktokImprovementsIntro: "The current version has some points that can be improved to increase flexibility, security, and usability:",
+            tiktokImprovementsFile: "<strong>Fixed Video Path:</strong> The <code>VIDEO_FILE_PATH</code> is hardcoded, preventing dynamic selection by the user.",
+            tiktokImprovementsUrl: "<strong>Ngrok/Host URL:</strong> The base URL is fixed, which is problematic with dynamic URLs like those from free Ngrok.",
+            tiktokImprovementsSecret: "<strong>Credential Security:</strong> The <code>CLIENT_SECRET</code> is directly in the code, which is not secure for production.",
+            tiktokImprovementsState: "<strong>OAuth state parameter:</strong> The <code>state</code> parameter is fixed, making the application vulnerable to CSRF.",
+            tiktokImprovementsRefresh: "<strong>Use of refresh_token:</strong> The <code>refresh_token</code> is obtained, but there is no logic to use it to renew an expired <code>access_token</code>.",
+            tiktokImprovementsUI: "<strong>User Interface (UI):</strong> The interface is very basic (plain text).",
+            tiktokImprovementsMetadata: "<strong>Video Metadata:</strong> Title and description are hardcoded.",
+            tiktokImprovementsErrors: "<strong>Error Handling:</strong> Simple error messages for the end-user.",
+            tiktokImprovementsLogging: "<strong>Logging:</strong> Use of <code>print()</code> instead of the <code>logging</code> module.",
+            tiktokImprovementsChunks: "<strong>Chunked Upload:</strong> The video is sent as a single chunk, less robust for large files.",
+            tiktokImprovementsConfig: "<strong>Centralized Configuration:</strong> Settings scattered as global variables.",
+            tiktokImprovementsPublish: "<strong>Direct Publishing Scope:</strong> Currently only sends to drafts (<code>video.upload</code>), does not publish directly (<code>video.publish</code>).",
+
+            pageTitleTikTokNextSteps: "Next Steps and Future Features - TikTok Sender - Blessed Quiz",
+            tiktokNextStepsHeader: "Next Steps and Future Features",
+            tiktokNextStepsIntro: "Based on the points for improvement, the following features and UI enhancements are suggested:",
+            tiktokNextStepsUIHeader: "User Interface (UI) Improvements",
+            tiktokNextStepsUIHome: "<strong>Home Page (/):</strong> Welcome and 'Login with TikTok' button.",
+            tiktokNextStepsUIUploadForm: "<strong>Upload Form:</strong> Field to select file, fields for title, description, hashtags, and other settings.",
+            tiktokNextStepsUIStatus: "<strong>Feedback/Status Page:</strong> Show upload success/error and publication status (if applicable).",
+            tiktokNextStepsUILayout: "<strong>Consistent Layout:</strong> Use Flask templates (Jinja2) for a cohesive look.",
+            tiktokNextStepsFeaturesHeader: "New Features",
+            tiktokNextStepsFeaturesDynamicFile: "<strong>Dynamic Video Selection:</strong> Allow the user to choose the file.",
+            tiktokNextStepsFeaturesMetadataInput: "<strong>User Metadata Input:</strong> Capture title, description, etc., via form.",
+            tiktokNextStepsFeaturesRefreshToken: "<strong>refresh_token Implementation:</strong> Automatically renew the <code>access_token</code> when it expires.",
+            tiktokNextStepsFeaturesDirectPublish: "<strong>Direct Publishing Option:</strong> Allow choosing between drafts (<code>video.upload</code>) and direct publishing (<code>video.publish</code>), including verification of status.",
+            tiktokNextStepsFeaturesConfig: "<strong>Improved Configuration Management:</strong> Read settings from environment variables or <code>.env</code> file.",
+            tiktokNextStepsFeaturesHistory: "<strong>Upload History (Advanced):</strong> Store and display history in a database.",
+            tiktokNextStepsFeaturesScheduling: "<strong>Post Scheduling (Very Advanced):</strong> Allow scheduling publication for a future date/time.",
+            tiktokNextStepsFeaturesMultiAccount: "<strong>Multi-Account Support (Advanced):</strong> Manage multiple TikTok accounts."
         },
         pt: {
             // Site-wide
@@ -77,6 +160,11 @@ document.addEventListener('DOMContentLoaded', () => {
             navTerms: "Termos de Serviço",
             navPrivacy: "Política de Privacidade",
             contactEmailLink: "<a href=\"mailto:ablessedquiz@gmail.com\">ablessedquiz@gmail.com</a>",
+            navTikTokOverview: "Visão Geral TikTok Sender",
+            navTikTokHowItWorks: "Como Funciona",
+            navTikTokTechConfig: "Tecnologia e Config.",
+            navTikTokImprovements: "Melhorias",
+            navTikTokNextSteps: "Próximos Passos",
 
             // index.html
             pageTitleIndex: "Blessed Quiz - Início",
@@ -88,10 +176,13 @@ document.addEventListener('DOMContentLoaded', () => {
             ourMissionHeader: "Nossa Missão",
             missionWelcome: "Bem-vindo ao Blessed Quiz!",
             missionP1: "Nossa missão é fornecer uma experiência divertida e enriquecedora para todos que desejam aprofundar seus conhecimentos sobre a Bíblia. Acreditamos que aprender sobre a Palavra de Deus deve ser uma jornada inspiradora e acessível para todos, independentemente de onde estejam em sua caminhada de fé.",
-            whatMovesUs: "<strong>O que nos move:</strong>",
-            education: "<strong>Educação:</strong> Oferecemos quizzes que educam e desafiam, ajudando você a crescer em seu entendimento das Escrituras.",
-            community: "<strong>Comunidade:</strong> Criamos um espaço onde os crentes podem se conectar, compartilhar e aprender juntos.",
-            inspiration: "<strong>Inspiração:</strong> Nosso objetivo é inspirá-lo a explorar a Bíblia de maneiras novas e emocionantes, fortalecendo sua fé e conhecimento.",
+            whatMovesUsHeading: "O que nos move:", // Corrected key
+            educationHeading: "Educação:", // Corrected key
+            educationText: "Oferecemos quizzes que educam e desafiam, ajudando você a crescer em seu entendimento das Escrituras.", // Corrected key
+            communityHeading: "Comunidade:", // Corrected key
+            communityText: "Criamos um espaço onde os crentes podem se conectar, compartilhar e aprender juntos.", // Corrected key
+            inspirationHeading: "Inspiração:", // Corrected key
+            inspirationText: "Nosso objetivo é inspirá-lo a explorar a Bíblia de maneiras novas e emocionantes, fortalecendo sua fé e conhecimento.", // Corrected key
             joinUs: "Junte-se a nós e faça parte de nossa comunidade de aprendizado e crescimento espiritual!",
 
             // terms-of-service.html
@@ -135,6 +226,80 @@ document.addEventListener('DOMContentLoaded', () => {
             privacyPolicyChangesP: "Podemos atualizar esta Política de Privacidade de tempos em tempos. Quaisquer alterações serão publicadas nesta página, e seu uso continuado do site constitui aceitação da política atualizada.",
             privacyContactTitle: "8. Informações de Contato",
             privacyContactP: "Se você tiver alguma dúvida ou preocupação sobre esta Política de Privacidade, entre em contato conosco em ", // Email will be appended
+
+            // TikTok Sender Pages Translations
+            pageTitleTikTokOverview: "Visão Geral do Projeto TikTok Sender - Blessed Quiz",
+            tiktokOverviewHeader: "Visão Geral do Projeto: BlessedQuizz_TIKTOK_sender_V6.py",
+            tiktokOverviewP1: "Este projeto é uma aplicação web construída com Flask (um microframework Python) que tem como principal objetivo permitir o upload de vídeos para o TikTok. Ele automatiza o processo de autenticação e envio de arquivos de vídeo para a plataforma.",
+            tiktokOverviewFeaturesHeader: "Principais Funcionalidades",
+            tiktokOverviewFeaturesIntro: "O projeto implementa as seguintes funcionalidades principais:",
+            tiktokOverviewFeatureAuth: "Autenticação OAuth 2.0 com PKCE para conectar com a conta TikTok do usuário.",
+            tiktokOverviewFeatureUpload: "Upload de arquivos de vídeo para a caixa de entrada (rascunhos) do TikTok.",
+            tiktokOverviewFeatureConfig: "Configuração via variáveis no código.",
+
+            pageTitleTikTokHowItWorks: "Como Funciona - TikTok Sender - Blessed Quiz",
+            tiktokHowItWorksHeader: "Como Funciona",
+            tiktokHowItWorksAuthHeader: "Autenticação OAuth 2.0 com PKCE",
+            tiktokHowItWorksAuthIntro: "O processo de autenticação segue o fluxo OAuth 2.0 com Proof Key for Code Exchange (PKCE) para segurança:",
+            tiktokHowItWorksAuthStep1: "<strong>Início do Fluxo (/):</strong> Gera um <code>code_verifier</code> e <code>code_challenge</code>, redireciona o usuário para a página de autorização do TikTok com os parâmetros necessários (CLIENT_KEY, SCOPES, REDIRECT_URI, code_challenge).",
+            tiktokHowItWorksAuthStep2: "<strong>Callback (/callback):</strong> Recebe o <code>code</code> do TikTok, recupera o <code>code_verifier</code> da sessão. Faz uma requisição POST para o endpoint de token do TikTok para trocar o <code>code</code> pelo <code>access_token</code> e <code>refresh_token</code>, usando o <code>code_verifier</code> para validação (PKCE). Armazena os tokens e <code>open_id</code> na sessão.",
+            tiktokHowItWorksUploadHeader: "Upload de Vídeo (/upload)",
+            tiktokHowItWorksUploadIntro: "Após a autenticação, o upload do vídeo ocorre da seguinte forma:",
+            tiktokHowItWorksUploadStep1: "<strong>Pré-requisitos:</strong> Requer <code>access_token</code> e <code>open_id</code> na sessão. O caminho do arquivo de vídeo (<code>VIDEO_FILE_PATH</code>) é fixo no código.",
+            tiktokHowItWorksUploadStep2: "<strong>Inicialização do Upload:</strong> Faz uma requisição POST para <code>/v2/post/publish/inbox/video/init/</code> com o <code>access_token</code> e <code>open_id</code>, fornecendo informações sobre o vídeo (tamanho, etc.). Recebe uma <code>upload_url</code> e <code>publish_id</code>.",
+            tiktokHowItWorksUploadStep3: "<strong>Envio do Arquivo:</strong> Faz uma requisição PUT para a <code>upload_url</code> com os dados binários do arquivo de vídeo. O vídeo é enviado para a caixa de entrada/rascunhos do usuário no TikTok.",
+            tiktokHowItWorksUploadStep4: "<strong>Resultado:</strong> O usuário precisa acessar o aplicativo TikTok para publicar o vídeo manualmente a partir dos rascunhos.",
+
+            pageTitleTikTokTechConfig: "Tecnologia e Configuração - TikTok Sender - Blessed Quiz",
+            tiktokTechConfigHeader: "Tecnologia e Configuração",
+            tiktokTechConfigConfigHeader: "Configuração",
+            tiktokTechConfigConfigIntro: "As configurações principais são definidas como variáveis globais no início do script:",
+            tiktokTechConfigConfigKey: "<code>CLIENT_KEY</code>, <code>CLIENT_SECRET</code>: Credenciais da API do TikTok.",
+            tiktokTechConfigConfigUrls: "<code>NGROK_OR_HOST_URL</code>, <code>REDIRECT_URI</code>: URLs para o redirecionamento OAuth.",
+            tiktokTechConfigConfigScopes: "<code>SCOPES</code>: Permissões solicitadas (ex: <code>user.info.basic</code>, <code>video.upload</code>).",
+            tiktokTechConfigConfigFile: "<code>VIDEO_FILE_PATH</code>: Caminho fixo para o arquivo de vídeo a ser enviado.",
+            tiktokTechConfigConfigSession: "A sessão do Flask é configurada para usar o sistema de arquivos (<code>flask_session</code>).",
+            tiktokTechConfigTechHeader: "Tecnologias Utilizadas",
+            tiktokTechConfigTechIntro: "O projeto utiliza as seguintes tecnologias e bibliotecas Python:",
+            tiktokTechConfigTechFlask: "<strong>Flask:</strong> Microframework web para a estrutura da aplicação.",
+            tiktokTechConfigTechFlaskSession: "<strong>Flask-Session:</strong> Extensão para gerenciamento de sessão.",
+            tiktokTechConfigTechRequests: "<strong>Requests:</strong> Para fazer requisições HTTP para a API do TikTok.",
+            tiktokTechConfigTechCrypto: "<strong>hashlib, base64, secrets:</strong> Módulos padrão para operações criptográficas (PKCE).",
+            tiktokTechConfigTechStdlib: "<strong>os, json:</strong> Módulos padrão para manipulação de arquivos e JSON.",
+
+            pageTitleTikTokImprovements: "Pontos de Melhoria - TikTok Sender - Blessed Quiz",
+            tiktokImprovementsHeader: "Pontos de Melhoria",
+            tiktokImprovementsIntro: "A versão atual possui alguns pontos que podem ser aprimorados para aumentar a flexibilidade, segurança e usabilidade:",
+            tiktokImprovementsFile: "<strong>Caminho do Vídeo Fixo:</strong> O <code>VIDEO_FILE_PATH</code> é 'hardcoded', impedindo a seleção dinâmica pelo usuário.",
+            tiktokImprovementsUrl: "<strong>URL do Ngrok/Host:</strong> A URL base é fixa, o que é problemático com URLs dinâmicas como as do Ngrok gratuito.",
+            tiktokImprovementsSecret: "<strong>Segurança das Credenciais:</strong> O <code>CLIENT_SECRET</code> está diretamente no código, o que não é seguro para produção.",
+            tiktokImprovementsState: "<strong>Parâmetro state no OAuth:</strong> O parâmetro <code>state</code> é fixo, tornando a aplicação vulnerável a CSRF.",
+            tiktokImprovementsRefresh: "<strong>Uso do refresh_token:</strong> O <code>refresh_token</code> é obtido, mas não há lógica para usá-lo para renovar o <code>access_token</code> expirado.",
+            tiktokImprovementsUI: "<strong>Interface do Usuário (UI):</strong> A interface é muito básica (texto simples).",
+            tiktokImprovementsMetadata: "<strong>Metadados do Vídeo:</strong> Título e descrição são fixos no código.",
+            tiktokImprovementsErrors: "<strong>Tratamento de Erros:</strong> Mensagens de erro simples para o usuário final.",
+            tiktokImprovementsLogging: "<strong>Logging:</strong> Uso de <code>print()</code> em vez do módulo <code>logging</code>.",
+            tiktokImprovementsChunks: "<strong>Upload em Pedaços:</strong> O vídeo é enviado como um único pedaço, menos robusto para arquivos grandes.",
+            tiktokImprovementsConfig: "<strong>Configuração Centralizada:</strong> Configurações espalhadas como variáveis globais.",
+            tiktokImprovementsPublish: "<strong>Escopo de Publicação Direta:</strong> Atualmente só envia para rascunhos (<code>video.upload</code>), não publica diretamente (<code>video.publish</code>).",
+
+            pageTitleTikTokNextSteps: "Próximos Passos e Funcionalidades Futuras - TikTok Sender - Blessed Quiz",
+            tiktokNextStepsHeader: "Próximos Passos e Funcionalidades Futuras",
+            tiktokNextStepsIntro: "Com base nos pontos de melhoria, as seguintes funcionalidades e aprimoramentos de interface são sugeridos:",
+            tiktokNextStepsUIHeader: "Melhorias na Interface do Usuário (UI)",
+            tiktokNextStepsUIHome: "<strong>Página Inicial (/):</strong> Boas-vindas e botão 'Login com TikTok'.",
+            tiktokNextStepsUIUploadForm: "<strong>Formulário de Upload:</strong> Campo para selecionar arquivo, campos para título, descrição, hashtags e outras configurações.",
+            tiktokNextStepsUIStatus: "<strong>Página de Feedback/Status:</strong> Mostrar sucesso/erro do upload e status da publicação (se aplicável).",
+            tiktokNextStepsUILayout: "<strong>Layout Consistente:</strong> Usar templates Flask (Jinja2) para um visual coeso.",
+            tiktokNextStepsFeaturesHeader: "Novas Funcionalidades",
+            tiktokNextStepsFeaturesDynamicFile: "<strong>Seleção Dinâmica de Vídeo:</strong> Permitir que o usuário escolha o arquivo.",
+            tiktokNextStepsFeaturesMetadataInput: "<strong>Entrada de Metadados pelo Usuário:</strong> Capturar título, descrição, etc., via formulário.",
+            tiktokNextStepsFeaturesRefreshToken: "<strong>Implementação do refresh_token:</strong> Renovar o <code>access_token</code> automaticamente quando expirar.",
+            tiktokNextStepsFeaturesDirectPublish: "<strong>Opção de Publicação Direta:</strong> Permitir escolher entre rascunhos (<code>video.upload</code>) e publicação direta (<code>video.publish</code>), incluindo verificação de status.",
+            tiktokNextStepsFeaturesConfig: "<strong>Gerenciamento de Configurações Melhorado:</strong> Ler configurações de variáveis de ambiente ou arquivo <code>.env</code>.",
+            tiktokNextStepsFeaturesHistory: "<strong>Histórico de Uploads (Avançado):</strong> Armazenar e exibir histórico em um banco de dados.",
+            tiktokNextStepsFeaturesScheduling: "<strong>Post Agendado (Muito Avançado):</strong> Permitir agendar a publicação para data/hora futura.", // Corrected translation
+            tiktokNextStepsFeaturesMultiAccount: "<strong>Suporte a Múltiplas Contas (Avançado):</strong> Gerenciar várias contas TikTok."
         }
     };
 
@@ -145,15 +310,19 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelectorAll('[data-translate]').forEach(el => {
             const key = el.getAttribute('data-translate');
             if (translations[lang] && translations[lang][key]) {
-                // For specific elements that need HTML, like contact links
-                if (key.endsWith("ContactP") || key === "contactEmailLink") {
-                     if (key.endsWith("ContactP") && (translations[lang][key] + translations[lang]["contactEmailLink"])){
-                        el.innerHTML = translations[lang][key] + translations[lang]["contactEmailLink"];
-                     } else {
-                        el.innerHTML = translations[lang][key];
-                     }
+                let text = translations[lang][key];
+
+                // Special handling for contact paragraphs that append an email link
+                if (key.endsWith("ContactP")) {
+                    text += translations[lang]["contactEmailLink"]; // Append email link
+                    el.innerHTML = text; // Use innerHTML as contactEmailLink is HTML
+                }
+                // For other keys, check if the translation string itself contains HTML
+                // or if the key is known to be HTML (like contactEmailLink itself)
+                else if (key === "contactEmailLink" || /<[a-z][\s\S]*>/i.test(text)) {
+                    el.innerHTML = text;
                 } else {
-                    el.textContent = translations[lang][key];
+                    el.textContent = text;
                 }
             }
         });
