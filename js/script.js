@@ -15,7 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
             navTikTokImprovements: "Improvements",
             navTikTokNextSteps: "Next Steps",
 
-
             // index.html
             pageTitleIndex: "Blessed Quiz - Home",
             indexHeader: "Welcome to Blessed Quiz!",
