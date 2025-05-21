@@ -148,7 +148,7 @@ footer {
 
 .footer-section h4 {
     color: #ffffff; /* Cor de destaque para títulos, ex: branco */
-    font-size: 1.4em; /* Tamanho da fonte */
+    font-size: 0.8em; /* Tamanho da fonte */
     margin-bottom: 10px; /* Margem inferior */
     border-bottom: 1px solid #3498db; /* Linha sutil abaixo do título */
     padding-bottom: 5px; /* Padding inferior */
@@ -169,7 +169,7 @@ footer {
 
 .footer-section.links ul li a {
     color: #bdc3c7; /* Cor dos links */
-    font-size: 1.4em; /* Tamanho da fonte dos links */
+    font-size: 0.8em; /* Tamanho da fonte dos links */
     text-decoration: none;
     /* margin-bottom: 4px; Removido, agora no li */
     display: block;
