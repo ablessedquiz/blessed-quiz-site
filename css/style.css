@@ -564,6 +564,11 @@ footer {
     padding-left: 5px; /* Pequeno efeito de indentação */
 }
 
+.footer-section.links ul li a i {
+    margin-right: 8px; /* Espaço entre o ícone e o texto */
+    /* Os ícones herdam cor e tamanho da fonte do link <a> */
+}
+
 .footer-section.links ul li::before {
     content: none; /* Remove the cross icon from footer links */
 }
