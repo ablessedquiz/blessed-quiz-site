@@ -3,7 +3,7 @@
 body {
     font-family: 'Open Sans', sans-serif;
     margin: 0;
-    padding-top: 80px; /* Add padding to body to prevent content from being hidden by fixed header */
+    padding-top: 130px; /* Increased padding for taller header (header content + nav) */
     background-color: #f0f4f8; /* Light, slightly blueish gray */
     color: #333;
     line-height: 1.6;
@@ -17,15 +17,23 @@ header {
     background-color: #3A506B; /* Deep teal/blue */
     color: #fff;
     padding: 1em 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: flex; /* Enables flexbox */
+    flex-direction: column; /* Stacks children (header-row and nav) vertically */
+    align-items: stretch; /* Stretches children to fill the width of the header's content box */
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     position: fixed; /* Make header fixed */
     top: 0;
     left: 0;
     right: 0;
     z-index: 1000; /* Ensure header is above other content */
+}
+
+/* New class to wrap the top part of the header (logo/title and language selector) */
+.header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; /* Ensures this row takes the full available width within the header's padding */
 }
 
 .header-content {
@@ -76,10 +84,12 @@ header {
 }
 
 nav {
-    background-color: #5BC0BE; /* Lighter teal */
-    padding: 0.8em 0;
+    background-color: #5BC0BE; /* Lighter teal - Kept for visual distinction within the header */
+    /* If you want nav to have the same background as the header, use: background-color: transparent; or remove this line. */
+    padding: 0.8em 0; /* Vertical padding for nav items */
     text-align: center;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    box-shadow: none; /* Removed shadow, as the main header already has one */
+    width: 100%; /* Ensures nav takes the full available width within the header's padding */
 }
 
 nav a {
