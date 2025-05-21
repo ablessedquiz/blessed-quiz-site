@@ -187,8 +187,15 @@ footer {
 }
 
 .footer-section.links ul li a i {
-    margin-right: 8px; /* Espaço entre o ícone e o texto */
-    /* Os ícones herdam cor e tamanho da fonte do link <a> */
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Font Awesome 5 Free"; /* Ou a versão correta que você está usando */
+    font-weight: 900; /* Para ícones sólidos 'fas' */
+    margin-right: 8px;
+    /* A cor e o tamanho da fonte são herdados do <a> por padrão */
 }
 
 .footer-section.links ul li::before {
