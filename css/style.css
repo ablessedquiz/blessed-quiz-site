@@ -565,8 +565,15 @@ footer {
 }
 
 .footer-section.links ul li a i {
+    display: inline-block; /* Garante que o ícone seja exibido como um bloco em linha */
+    font-style: normal;    /* Remove o estilo itálico padrão da tag <i>, se não desejado para o ícone */
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Font Awesome 5 Free"; /* Essencial para Font Awesome 5. Use "Font Awesome 6 Free" para FA6, etc. */
+    font-weight: 900; /* Essencial para ícones sólidos ('fas'). Para 'far' (regular) seria 400. */
     margin-right: 8px; /* Espaço entre o ícone e o texto */
-    /* Os ícones herdam cor e tamanho da fonte do link <a> */
+    /* Cor e tamanho da fonte são herdados do link <a>, o que geralmente é o desejado. */
 }
 
 .footer-section.links ul li::before {
