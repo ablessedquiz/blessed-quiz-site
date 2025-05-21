@@ -86,10 +86,14 @@ header {
 nav {
     background-color: #5BC0BE; /* Lighter teal - Kept for visual distinction within the header */
     /* If you want nav to have the same background as the header, use: background-color: transparent; or remove this line. */
-    padding: 0.8em 0; /* Vertical padding for nav items */
+    padding: 0.8em 20px; /* Vertical padding for nav items, horizontal padding to align content with header-row */
     text-align: center;
     box-shadow: none; /* Removed shadow, as the main header already has one */
-    width: 100%; /* Ensures nav takes the full available width within the header's padding */
+    width: 100vw; /* Make the element span the full width of the viewport */
+    position: relative; /* Needed for vw and calc margins to work reliably in some contexts, though often not strictly necessary */
+    left: 50%;
+    transform: translateX(-50%);
+    box-sizing: border-box; /* Ensure padding is included in the element's total width */
 }
 
 nav a {
