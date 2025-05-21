@@ -540,7 +540,8 @@ footer {
 
 .footer-section.about p {
     font-size: 0.85em; /* Tamanho da fonte reduzido */
-    line-height: 1.5;  /* Altura da linha reduzida */
+    line-height: 1.6;  /* Altura da linha reduzida */
+    font-size: 1.5em; /* Tamanho da fonte reduzido */
     color: #bdc3c7;
     margin-bottom: 8px; /* Margem inferior reduzida */
 }
@@ -652,7 +653,7 @@ footer {
         padding: 0 5px; /* Reduzir padding para mobile */
     }
     .footer-section h4 {
-        font-size: 1.05em; /* Reduzir fonte para mobile */
+        font-size: 1.5em; /* Reduzir fonte para mobile */
     }
      .footer-section.about p, .footer-section.links ul li a {
         font-size: 0.8em; /* Reduzir fonte para mobile */
