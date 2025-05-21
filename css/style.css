@@ -333,7 +333,7 @@ ul li {
 }
 
 ul li::before {
-    content: "✝"; /* Modern biblical icon - cross */
+    content: "✝"; /* Modern biblical icon - cross - */
     position: absolute;
     left: 0;
     color: #5BC0BE; /* Teal accent for list items */
