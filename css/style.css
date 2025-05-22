@@ -526,7 +526,7 @@ footer {
 
 .footer-section.links {
     /* Aumenta a largura mínima para a seção de "Quick Links", dando mais espaço horizontal aos links. */
-    min-width: 650px; /* Ajustado para garantir que os links caibam em no máximo duas linhas. O padrão para .footer-section é 220px. */
+    min-width: 550px; /* Ajustado para garantir que os links caibam em no máximo duas linhas. O padrão para .footer-section é 220px. */
     /* Opcional: se quiser que esta seção também cresça proporcionalmente mais que as outras quando houver espaço extra: */
     /* flex-grow: 1.5; */ /* (O padrão é 1 para todas as .footer-section) */
 }
@@ -600,7 +600,6 @@ footer {
 }
 
 .footer-section.social a {
-    width: 50px; /* Tamanho mínimo para ícones sociais */
     color: #fff;               /* Padrão Header: Cor para ícones */
     margin-right: 10px; /* Espaço entre ícones sociais */
     font-size: 1.2em;          /* Tamanho padronizado, um pouco maior que texto normal */
