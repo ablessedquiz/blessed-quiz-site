@@ -657,7 +657,6 @@ footer {
     }
     .footer-section.links ul li {
         width: 100%; /* Stack links back to one column on smaller screens */
-        margin-right: 10px; /* Espaço entre ícones sociais */
     }
     .footer-section {
         min-width: 100%;
