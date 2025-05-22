@@ -526,7 +526,7 @@ footer {
 
 .footer-section.links {
     /* Aumenta a largura mínima para a seção de "Quick Links", dando mais espaço horizontal aos links. */
-    min-width: 320px; /* Ajuste este valor conforme necessário. O padrão para .footer-section é 220px. */
+    min-width: 350px; /* Ajustado para garantir que os links caibam em no máximo duas linhas. O padrão para .footer-section é 220px. */
     /* Opcional: se quiser que esta seção também cresça proporcionalmente mais que as outras quando houver espaço extra: */
     /* flex-grow: 1.5; */ /* (O padrão é 1 para todas as .footer-section) */
 }
