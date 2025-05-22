@@ -204,6 +204,13 @@ footer {
 
 .footer-section.social a {
     width: auto; /* Garante que o link ocupe apenas o espaço necessário */
+
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+
+
     color: #ecf0f1;
     margin-right: 10px; /* Espaço entre ícones sociais */
     font-size: 1.4em; /* Tamanho dos ícones sociais */
