@@ -169,7 +169,7 @@ footer {
 
 .footer-section.links ul li a {
     color: #bdc3c7; /* Cor dos links */
-    font-size: 0.8em; /* Tamanho da fonte dos links  */
+    font-size: 0.8em; /* Tamanho da fonte dos links */
     text-decoration: none;
     /* margin-bottom: 4px; Removido, agora no li */
     display: block;
