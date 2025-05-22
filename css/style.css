@@ -513,9 +513,9 @@ footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    max-width: 1600px; /* Aumentado para ocupar mais largura da página */
+    max-width: 1800px; /* Aumentado para ocupar mais largura da página */
     margin: 0 auto; /* Margem inferior controlada por .footer-section ou .footer-bottom */
-    gap: 15px; /* Espaço entre seções */
+    gap: 10px; /* Espaço entre seções */
 }
 
 .footer-section {
@@ -657,7 +657,7 @@ footer {
     }
     .footer-section.links ul li {
         width: 100%; /* Stack links back to one column on smaller screens */
-        padding-right: 0;
+        margin-right: 10px; /* Espaço entre ícones sociais */
     }
     .footer-section {
         min-width: 100%;
