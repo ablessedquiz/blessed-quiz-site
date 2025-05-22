@@ -513,7 +513,7 @@ footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    max-width: max-content; /* Aumentado para ocupar mais largura da página */
+    max-width: 100%; /* Aumentado para ocupar mais largura da página */
     margin: 0 auto; /* Margem inferior controlada por .footer-section ou .footer-bottom */
     gap: 10px; /* Espaço entre seções */
 }
