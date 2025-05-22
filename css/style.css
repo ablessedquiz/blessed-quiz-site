@@ -565,6 +565,7 @@ footer {
     display: inline-flex;      /* Para alinhar ícone e texto, e comportamento inline */
     align-items: center;
     margin-right: 15px;        /* Espaçamento entre links, similar à nav do header */
+    width: auto;               /* Garante que o link ocupe apenas o espaço necessário, não forçando colunas */
     margin-bottom: 8px;        /* Espaçamento inferior para links que quebram linha */
     transition: color 0.3s ease; /* Padrão Header: Transição suave */
 }
