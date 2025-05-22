@@ -206,9 +206,7 @@ footer {
     width: auto; /* Garante que o link ocupe apenas o espaço necessário */
 
     list-style: none;
-    padding: 0;
     display: flex;
-    flex-wrap: wrap;
 
 
     color: #ecf0f1;
