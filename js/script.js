@@ -19,6 +19,13 @@ document.addEventListener('DOMContentLoaded', () => {
             pageTitleIndex: "Blessed Quiz - Home",
             indexHeader: "Welcome to Blessed Quiz!",
             indexIntro: "Explore your knowledge of the Bible with our engaging quizzes. Select a page from the menu to learn more about us or start your journey!",
+            indexWhyBlessedQuiz: "Why Blessed Quiz?",
+            indexLearnGrowTitle: "Learn and Grow",
+            indexLearnGrowText: "Our quizzes are carefully crafted to educate and inspire, helping you deepen your knowledge of the Holy Scriptures.",
+            indexVibrantCommunityTitle: "Vibrant Community",
+            indexVibrantCommunityText: "Join a community of Bible enthusiasts, share learnings, and grow in faith together with other users.",
+            indexFunEngagementTitle: "Fun Engagement",
+            indexFunEngagementText: "We believe learning can be fun! Challenge yourself with our quizzes and see biblical knowledge come to life.",
 
             // our-mission.html
             pageTitleOurMission: "Our Mission - Blessed Quiz",
@@ -170,6 +177,13 @@ document.addEventListener('DOMContentLoaded', () => {
             pageTitleIndex: "Blessed Quiz - Início",
             indexHeader: "Bem-vindo ao Blessed Quiz!",
             indexIntro: "Explore seu conhecimento da Bíblia com nossos quizzes envolventes. Selecione uma página no menu para saber mais sobre nós ou iniciar sua jornada!",
+            indexWhyBlessedQuiz: "Por que Blessed Quiz?",
+            indexLearnGrowTitle: "Aprenda e Cresça",
+            indexLearnGrowText: "Nossos quizzes são cuidadosamente elaborados para educar e inspirar, ajudando você a aprofundar seu conhecimento das Sagradas Escrituras.",
+            indexVibrantCommunityTitle: "Comunidade Vibrante",
+            indexVibrantCommunityText: "Junte-se a uma comunidade de entusiastas da Bíblia, compartilhe aprendizados e cresça na fé junto com outros usuários.",
+            indexFunEngagementTitle: "Engajamento Divertido",
+            indexFunEngagementText: "Acreditamos que aprender pode ser divertido! Desafie-se com nossos quizzes e veja o conhecimento bíblico ganhar vida.",
 
             // our-mission.html
             pageTitleOurMission: "Nossa Missão - Blessed Quiz",
