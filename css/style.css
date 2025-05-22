@@ -499,10 +499,11 @@ a:hover {
 
 /* Footer Styles */
 footer {
-    background-color: #2c3e50; /* Cor escura e moderna, ex: azul ardósia escuro */
-    color: #ecf0f1; /* Cor de texto clara, ex: cinza claro */    
-    padding: 10px 20px; /* Altura do rodapé reduzida (padding superior/inferior 10px) */
-    font-size: 0.9em;
+    background-color: #3A506B; /* Padrão Header: Cor de fundo principal */
+    color: #fff;               /* Padrão Header: Cor de texto principal */
+    padding: 1em 20px;        /* Padrão Header: Padding (aprox. 16px 20px) */
+    font-family: 'Open Sans', sans-serif; /* Padrão Body: Fonte base */
+    font-size: 1em;             /* Padrão Header Nav: Tamanho de fonte base para o rodapé */
     margin-top: auto; /* Garante que o rodapé fique no final em páginas com pouco conteúdo */
     text-align: left;
 }
@@ -511,65 +512,66 @@ footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    max-width: 90%; /* Largura do conteúdo aumentada */
+    max-width: 1140px; /* Consistente com larguras comuns de container, ajuste se necessário */
     margin: 0 auto; /* Margem inferior controlada por .footer-section ou .footer-bottom */
     gap: 15px; /* Espaço entre seções */
 }
 
 .footer-section {
     flex: 1;
-    min-width: 250px; /* Para responsividade */
+    min-width: 220px; /* Para responsividade, ajuste conforme o número de seções */
     margin-bottom: 15px; /* Margem inferior */
     padding: 0 10px; /* Padding interno da seção */
 }
 
 .footer-section h4 {
-    color: #ffffff; /* Cor de destaque para títulos, ex: branco */
-    font-size: 1.1em; /* Tamanho da fonte */
+    font-family: 'Montserrat', sans-serif; /* Padrão Header: Fonte para títulos/nav */
+    color: #FFD700;           /* Padrão Header: Cor de destaque para títulos */
+    font-size: 1.2em;          /* Padrão Header: Tamanho de fonte para títulos de seção */
+    font-weight: bold;         /* Padrão Header: Peso da fonte para títulos/nav */
     margin-bottom: 10px; /* Margem inferior */
-    border-bottom: 1px solid #3498db; /* Linha sutil abaixo do título */
+    border-bottom: 1px solid #5BC0BE; /* Padrão Header: Cor da nav para borda sutil */
     padding-bottom: 5px; /* Padding inferior */
-    font-weight: 600;
 }
 
 .footer-logo {
-    width: 60px; /* Tamanho menor para o logo no rodapé */
+    height: 35px; /* Padrão Header: Logo um pouco menor que o do header (50px) */
+    width: auto;
     margin-bottom: 8px; /* Margem inferior ligeiramente reduzida */
-    opacity: 0.8;
+    opacity: 1; /* Padrão Header: Sem opacidade reduzida */
 }
 
 .footer-section.about p {
-    font-size: 0.85em; /* Tamanho da fonte reduzido */
-    line-height: 1.6;  /* Altura da linha reduzida */
-    font-size: 1.5em; /* Tamanho da fonte reduzido */
-    color: #bdc3c7;
+    font-family: 'Open Sans', sans-serif; /* Padrão Body: Fonte para texto */
+    color: #e0e0e0;           /* Padrão Header: Cor de subtítulo/texto secundário */
+    font-size: 0.9em;          /* Padrão Header: Tamanho de fonte de subtítulo */
+    line-height: 1.6;
     margin-bottom: 8px; /* Margem inferior reduzida */
 }
 
 .footer-section.links ul {
     list-style: none;
     padding: 0;
-    display: flex; /* Enable flexbox for columns */
-    flex-wrap: wrap; /* Allow items to wrap into multiple columns */
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .footer-section.links ul li a {
-    color: #bdc3c7; /* Cor dos links */
-    font-size: 0.85em; /* Tamanho da fonte dos links */
+    font-family: 'Montserrat', sans-serif; /* Padrão Header: Fonte para nav links */
+    color: #fff;               /* Padrão Header: Cor para nav links */
+    font-size: 1em;            /* Padrão Header: Tamanho de fonte para nav links */
+    font-weight: bold;         /* Padrão Header: Peso da fonte para nav links */
     text-decoration: none;
-    margin-bottom: 4px; /* Margem inferior reduzida */
-    display: block;    
-    width: 100%; /* Links em uma única coluna */
-    box-sizing: border-box; /* Include padding/border in width */
-    padding-right: 0; /* Removido espaço entre colunas */
-    padding-left: 0; /* Reset padding-left from general ul li rule */
-    position: static; /* Reset position from general ul li rule */
-    transition: color 0.2s ease, padding-left 0.2s ease;
+    display: inline-flex;      /* Para alinhar ícone e texto, e comportamento inline */
+    align-items: center;
+    margin-right: 15px;        /* Espaçamento entre links, similar à nav do header */
+    margin-bottom: 8px;        /* Espaçamento inferior para links que quebram linha */
+    transition: color 0.3s ease; /* Padrão Header: Transição suave */
 }
 
 .footer-section.links ul li a:hover {
-    color: #ffc107; /* Destaque no hover */
-    padding-left: 5px; /* Pequeno efeito de indentação */
+    color: #FFD700;           /* Padrão Header: Cor de destaque no hover */
+    text-decoration: none;
 }
 
 .footer-section.links ul li a i {
@@ -579,9 +581,10 @@ footer {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     font-family: "Font Awesome 5 Free"; /* Essencial para Font Awesome 5. Use "Font Awesome 6 Free" para FA6, etc. */
-    font-weight: 900; /* Essencial para ícones sólidos ('fas'). Para 'far' (regular) seria 400. */
+    font-weight: 900; /* Essencial para ícones sólidos ('fas'). */
     margin-right: 8px; /* Espaço entre o ícone e o texto */
-    /* Cor e tamanho da fonte são herdados do link <a>, o que geralmente é o desejado. */
+    font-size: 1em; /* Padrão: Mesmo tamanho do texto do link, ou ajuste (ex: 1.1em) */
+    /* A cor é herdada do link <a> (será #fff) */
 }
 
 .footer-section.links ul li::before {
@@ -589,24 +592,24 @@ footer {
 }
 
 .footer-section.social a {
-    color: #ecf0f1;
+    color: #fff;               /* Padrão Header: Cor para ícones */
     margin-right: 10px; /* Espaço entre ícones sociais */
-    font-size: 1.4em; /* Tamanho dos ícones sociais */
+    font-size: 1.2em;          /* Tamanho padronizado, um pouco maior que texto normal */
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .footer-section.social a:hover {
-    color: #ffc107; /* Destaque no hover */
+    color: #FFD700;           /* Padrão Header: Cor de destaque no hover */
     transform: scale(1.1); /* Efeito de zoom sutil */
 }
 
 .footer-bottom {
     text-align: center;
-    padding-top: 10px; /* Padding superior */
-    margin-top: 10px;  /* Margem superior para separar do conteúdo acima */
-    border-top: 1px solid #34495e; /* Linha divisória mais escura */
-    font-size: 0.8em;
-    color: #bdc3c7;
+    padding-top: 15px;
+    margin-top: 15px;
+    border-top: 1px solid #5BC0BE; /* Padrão Header: Cor da nav para borda sutil */
+    font-size: 0.9em;          /* Padrão Header: Tamanho de fonte de subtítulo */
+    color: #e0e0e0;           /* Padrão Header: Cor de subtítulo/texto secundário */
     width: 100%; /* Garante que ocupe toda a largura */
 }
 
@@ -653,11 +656,12 @@ footer {
         padding: 0 5px; /* Reduzir padding para mobile */
     }
     .footer-section h4 {
-        font-size: 1.5em; /* Reduzir fonte para mobile */
+        font-size: 1.1em; /* Ajuste para mobile, mantendo proporção */
     }
-     .footer-section.about p, .footer-section.links ul li a {
-        font-size: 0.8em; /* Reduzir fonte para mobile */
+     .footer-section.about p {
+        font-size: 0.85em; /* Ajuste para mobile */
     }
+    .footer-section.links ul li a { font-size: 0.9em; /* Ajuste para mobile */}
     .footer-section.social a {
         margin: 0 10px; /* Ajustar margem para ícones sociais centralizados */
     }
