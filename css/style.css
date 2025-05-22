@@ -203,6 +203,7 @@ footer {
 }
 
 .footer-section.social a {
+    max-width: 50px;
     color: #ecf0f1;
     margin-right: 10px; /* Espaço entre ícones sociais */
     font-size: 1.4em; /* Tamanho dos ícones sociais */
@@ -542,7 +543,7 @@ footer {
 }
 
 .footer-logo {
-    height: 35px; /* Padrão Header: Logo um pouco menor que o do header (50px) */
+    height: auto; /* Padrão Header: Logo um pouco menor que o do header (50px) */
     width: auto;
     margin-bottom: 8px; /* Margem inferior ligeiramente reduzida */
     opacity: 1; /* Padrão Header: Sem opacidade reduzida */
