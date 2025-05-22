@@ -600,6 +600,7 @@ footer {
 }
 
 .footer-section.social a {
+    max-width: 100px;
     color: #fff;               /* Padrão Header: Cor para ícones */
     margin-right: 10px; /* Espaço entre ícones sociais */
     font-size: 1.2em;          /* Tamanho padronizado, um pouco maior que texto normal */
