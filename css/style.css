@@ -121,8 +121,8 @@ footer {
     /* flex: 1; Removido para usar flex-basis */
     flex-grow: 1; /* Permite que as seções cresçam */
     flex-basis: calc(50% - 7.5px); /* Almeja 2 colunas principais (gap de 15px / 2 = 7.5px) */
-    min-width: 280px; /* Largura mínima antes de empilhar */
-    margin-bottom: 15px; /* Margem inferior */
+    min-width: 300px; /* Largura mínima antes de empilhar */
+    margin-bottom: 10px; /* Margem inferior */
     padding: 0 10px; /* Padding interno da seção */
 }
 
